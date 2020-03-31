@@ -1,0 +1,120 @@
+<view class='title-box col'>
+  <view class='title '>方案基础信息：</view>
+  <view class='title1 row_s'>
+    <view>铝材:{{info.lvcai}}米</view>
+    <view class='dian'></view>
+    <view class='row_s'>封窗总面积:{{info.area}}M<view style='margin-top:-20rpx;font-size:16rpx;'>2</view></view>
+    <view class='dian'></view>
+    <view>配件:{{info.pei}}套</view>
+  </view>
+</view>
+
+<!-- 铝材 -->
+<view class='box' >
+  <view class='box-title '>查看铝材品牌:</view>
+  <view class='list row_s'>
+    <view class='{{index==lcIndex?"list-box1 row_c":"list-box row_c"}}' wx:for='{{lclist}}' data-index='{{index}}' catchtap='onChangeLc'>{{item.name}}</view>
+  </view>
+  <view class='debox col_c'>
+    <view class='debox-xl row_s warp'>
+      <view class='debox-title'>系列选择:</view>
+      <view class='r-box row_s'>
+        <view class='row_s' wx:for='{{lclist[lcIndex].seriesList}}' 
+          wx:for-item='v' wx:for-index='i' >
+          <view class='{{lcIndex1==i?"debox-xl1 row_c":"debox-xl2 row_c"}}'
+          data-index='{{i}}' catchtap='onChangeLcXl'>{{v.name}}</view>
+          <view class='debox-txt'>{{(v.price)}}元/米</view>
+        </view>
+      </view>
+    </view>
+    <view class='debox-ys row_s '>
+      <view class='debox-title'>颜色选择:</view>
+      <view class='r-box row_s'>
+        <view class='{{lcColorIndex==index?"ys-box1 row_c":"ys-box row_c"}}' wx:for='{{lclist[lcIndex].colorsList}}' data-index='{{index}}' catchtap='onChangeLcColor'>
+        <view class='color' style='background:{{item.code}}'></view>
+        <view class='debox-txt1'>{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='botbox row_b'>
+    <view class='botbox-title'>铝材总价：{{info.lvcai}} X {{lcdjPrice}} = {{lcPrice}}元</view>
+    <view class='botbox-btn row_c' data-type='0' data-id='{{lclist[lcIndex].id}}' catchtap='onContent'>铝材详情</view>
+  </view>
+</view>
+
+<!-- 配件 -->
+<view class='box' >
+  <view class='box-title '>查看配件品牌:</view>
+  <view class='list row_s'>
+    <view class='{{index==pjIndex?"list-box1 row_c":"list-box row_c"}}' wx:for='{{pjlist}}' data-index='{{index}}' catchtap='onChangePj'>{{item.name}}</view>
+  </view>
+
+  <view class='topbox row_b nowarp'>
+    <view class='botbox-price'>配件总价：{{info.pei}} X {{pjlist[pjIndex].price}} = {{pjPrice}}元</view>
+    <view class='botbox-price1'>单价：{{pjlist[pjIndex].price}}元/套</view>
+  </view>
+  <view class='botbox row_b nowarp'>
+    <view class='botbox-txt'>{{pjlist[pjIndex].detail}}</view>
+    <view class='botbox-btn row_c' data-type='1' data-id='{{pjlist[pjIndex].id}}' catchtap='onContent'>配件详情</view>
+  </view>
+</view>
+
+<!-- 防护栏 -->
+<view class='box' >
+  <view class='box-title '>防护栏查看:</view>
+  <view class='list row_s'>
+    <view class='{{index==fhlIndex?"list-box1 row_c":"list-box row_c"}}' wx:for='{{fhllist}}' data-index='{{index}}' catchtap='onChangeFhl'>{{item.name}}</view>
+  </view>
+
+  <view class='topbox row_b nowarp'>
+    <view class='botbox-price' wx:if='{{fhlIndex==0}}'>防护栏总价：{{info.pei}} X {{(lclist[lcIndex].price)}} = {{fhlPrice}}元</view>
+    <view class='botbox-price' wx:else>防护栏总价：{{info.pei}} X 0 = 0元</view>
+    <view class='botbox-price1'>单价：{{(lclist[lcIndex].price)}}元/套</view>
+  </view>
+  <view class='botbox row_b nowarp'>
+    <view class='botbox-txt'>{{fhllist[0].detail}}</view>
+    <view class='botbox-btn row_c' data-type='4' data-id='{{fhllist[0].id}}' catchtap='onContent'>防护栏详情</view>
+  </view>
+</view>
+
+<!-- 玻璃 -->
+<view class='box' >
+  <view class='box-title '>玻璃查看:</view>
+  <view class='list row_s'>
+    <view class='{{index==blIndex?"list-box1 row_c":"list-box row_c"}}' wx:for='{{bllist}}' data-index='{{index}}' catchtap='onChangeBl'>{{item.name}}</view>
+  </view>
+  <view class='topbox row_b nowarp'>
+    <view class='botbox-price'>玻璃总价：{{info.area}} X {{(bllist[blIndex].price)}} = {{blPrice}}元</view>
+    <view class='botbox-price1'>单价：{{(bllist[blIndex].price)}}元/套</view>
+  </view>
+  <view class='botbox row_b nowarp'>
+    <view class='botbox-txt'>{{bllist[blIndex].detail}}</view>
+    <view class='botbox-btn row_c' data-type='2' data-id='{{bllist[blIndex].id}}' catchtap='onContent'>玻璃详情</view>
+  </view>
+</view>
+
+<!-- 安装公司 -->
+<view class='box' >
+  <view class='box-title '>安装公司:</view>
+  <view class='list row_s'>
+    <view class='list-box1 row_c'>{{azinfo.name}}</view>
+  </view>
+
+  <view class='topbox col nowarp'>
+    <view class='row_b'>
+      <view class='botbox-price'>安装总价：{{info.area}} X {{azinfo.price}} = {{azPrice}}元</view>
+      <view class='botbox-price1'>单价：{{azinfo.price}}元/m2</view>
+    </view>
+    <view class='topbox-txt'>{{azinfo.cost}}</view>
+  </view>
+  <view class='botbox row_b nowarp'>
+    <view class='botbox-txt'>{{azinfo.detail}}</view>
+    <view class='botbox-btn row_c' data-type='3' data-id='{{azinfo.id}}' catchtap='onContent'>查看详情</view>
+  </view>
+</view>
+
+<!-- 确认 -->
+<view class='submit col'>
+  <view class='btn row_c' catchtap='onClick'>返回</view>
+</view>

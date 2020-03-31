@@ -1,0 +1,289 @@
+
+page{
+  font-family: '微软雅黑';
+background-color: #fff;
+}
+.ellipsis{
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+ .arrow{
+  width: 14rpx;
+  height: 14rpx;
+  border-top: 4rpx solid #bfbfbf;
+  border-right: 4rpx solid #bfbfbf;
+  position:absolute;
+  right:35rpx;
+  transform:rotate(45deg);
+  top:45%;
+}
+ .arrow-x{
+  width: 14rpx;
+  height: 14rpx;
+  border-top: 4rpx solid #bfbfbf;
+  border-right: 4rpx solid #bfbfbf;
+  position:absolute;
+  right:35rpx;
+  transform:rotate(135deg);
+  top:45%;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+.row_s{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.col_s{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.row_e{
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.col_e{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.row_b{
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.col_b{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.row_c{
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.col_c{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nowarp{
+  overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.mar-t300{
+  margin-top: 300rpx;
+}
+.mar-t250{
+  margin-top: 250rpx;
+}
+.mar-t200{
+  margin-top: 200rpx;
+}
+.mar-t180{
+  margin-top: 180rpx;
+}
+.mar-t160{
+  margin-top: 160rpx;
+}
+.mar-t140{
+  margin-top: 140rpx;
+}
+.mar-t120{
+  margin-top: 120rpx;
+}
+.mar-t100{
+  margin-top: 100rpx;
+}
+.mar-t90{
+  margin-top: 90rpx;
+}
+.mar-t70{
+  margin-top: 70rpx;
+}
+.mar-t80{
+  margin-top: 80rpx;
+}
+.mar-t60{
+  margin-top: 60rpx;
+}
+.mar-t50{
+  margin-top: 50rpx;
+}
+.mar-t40{
+  margin-top: 40rpx;
+}
+.mar-t30{
+  margin-top: 30rpx;
+}
+.mar-t20{
+  margin-top: 20rpx;
+}
+.mar-t10{
+  margin-top: 10rpx;
+}
+.mar-l300{
+  margin-left: 300rpx;
+}
+.mar-l250{
+  margin-left: 250rpx;
+}
+.mar-l200{
+  margin-left: 200rpx;
+}
+.mar-l180{
+  margin-left: 180rpx;
+}
+.mar-l160{
+  margin-left: 160rpx;
+}
+.mar-l140{
+  margin-left: 140rpx;
+}
+.mar-l120{
+  margin-left: 120rpx;
+}
+.mar-l100{
+  margin-left: 100rpx;
+}
+.mar-l90{
+  margin-left: 90rpx;
+}
+.mar-l70{
+  margin-left: 70rpx;
+}
+.mar-l80{
+  margin-left: 80rpx;
+}
+.mar-l60{
+  margin-left: 60rpx;
+}
+.mar-l50{
+  margin-left: 50rpx;
+}
+.mar-l40{
+  margin-left: 40rpx;
+}
+.mar-l30{
+  margin-left: 30rpx;
+}
+.mar-l20{
+  margin-left: 20rpx;
+}
+.mar-l10{
+  margin-left: 10rpx;
+}
+.btn{
+  width: 690rpx;
+	height: 88rpx;
+	background-color: #c10000;
+	border-radius: 10rpx;
+  font-family: PingFang-SC-Medium;
+	font-size: 34rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 33rpx;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+}
+.load{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+}
+.wxParse-p{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap; 
+}
+.tabTop{
+  height: 120rpx;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: white;
+}
+.tabTop-i{
+  position: absolute;
+  width: 45rpx;
+  height: 40rpx;
+  bottom: 14rpx;
+  left: 35rpx;
+  z-index: 9999;
+}
+.tabTop-v{
+  font-size: 26rpx;
+  color: #000;
+  margin-top: 45rpx;
+}
+.tab-back{
+  position: fixed;
+  top: 50rpx;
+  left: 40rpx;
+  width: 70rpx;
+  height: 70rpx;
+  z-index: 9999;
+}
+
+
+
+/**外卖*/
+.swicth-box{
+  height: 80rpx;
+  width: 100%;
+  border-bottom: #c8c8c8 1rpx solid;
+}
+.swicth1{
+  overflow: scroll;
+}
+.sbox1{
+  white-space: nowrap;
+  max-width: 28%;
+  flex: 1;
+  margin: 0 30rpx;
+  /* padding: 0 10rpx; */
+  height: 60rpx;
+  font-family: PingFang-SC-Medium;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #fdb02d;
+  border-bottom: #c8c8c8 4rpx solid;
+}
+.sbox{
+  white-space: nowrap;
+   max-width: 28%;
+  flex: 1;
+  margin: 0 30rpx;
+  /* padding: 0 10rpx; */
+  height: 60rpx;
+  font-family: PingFang-SC-Medium;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #999999;
+}

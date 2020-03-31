@@ -1,0 +1,100 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.5.0",
+	"appid": "wxca2afad49ec4e062",
+	"projectname": "doors",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 7,
+			"list": [
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "pages/self/petition/petition",
+					"pathName": "pages/self/petition/petition",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "reward",
+					"pathName": "pages/my/reward/reward",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "bounty",
+					"pathName": "pages/my/bounty/bounty",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "emoji",
+					"pathName": "pages/emoji/emoji",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "order-evaluation",
+					"pathName": "pages/my/order/order-evaluation/order-evaluation",
+					"query": ""
+				},
+				{
+					"id": 11,
+					"name": "cash",
+					"pathName": "pages/index/cash/cash",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/self/self",
+					"pathName": "pages/self/self",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,34 @@
+
+<view class='search-boxs row_s'>
+  <view class='search-box row_s'>
+    <input class='input' placeholder='请输入城市名进行搜索' bindinput='onInput'></input>
+    <image class='search-img' src='/images/search.png'></image>
+  </view>
+  <view class='search-btn row_c' catchtap='onSearch'>搜索</view>
+</view>
+
+<!-- 当前城市 -->
+<view class='now row_s'>
+    <image src='/images/address.png' class='now-img'></image>
+    <view class='now-title row_s'>当前定位城市</view>
+    <view class='now-city row_s'>{{city}}</view>
+  </view>
+
+
+<!-- 城市列表 -->
+<view class='list col' >
+  <scroll-view scroll-y  class='row_b' style='{{"height:"+winHeight+"px"}}'>
+    <view class='row_s lists' >
+    
+      <view class='city-list row_s'  data-id='{{v.areaCode}}' data-name='{{v.name}}' catchtap='onSelect' wx:for='{{cityList}}' wx:for-item='v'>
+      
+        <view class="city-f"></view>
+        {{v.name}}
+      </view>
+      <view class='city-list row_s'  wx:if='{{cityList.length%2==1}}'></view>
+      
+    </view>
+  </scroll-view>
+
+</view>
+

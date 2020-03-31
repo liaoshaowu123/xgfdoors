@@ -1,0 +1,80 @@
+
+<view class='head'>
+  <view class='box-h row_b'>
+    <view class='name'>{{info.plotName}}{{info.houseNo}}</view>
+    <view class='status'>{{info.statuss}}</view>
+  </view>
+
+  <view class='box-h row_b'>
+    <view class='num'>订单号：{{info.orderNo}}</view>
+    <view class='price'>总价 ￥{{info.money}}</view>
+  </view>
+
+  <view class='box-h row_b'>
+    <view class='time'>{{info.createDate}}</view>
+    <view class='price1'>已付 ￥{{info.paid||0}}</view>
+  </view>
+  
+</view>
+
+
+<view class='box'  wx:for='{{info.verandaList}}'>
+  <view class='box-title row_c'>{{item.name}}</view>
+  <view class='img-boxs row_c'>
+    <view class='img-box'>
+      <image class='img' mode='widthFix' src='{{imgUrl+item.mcOrderVeranda.image}}'  data-img='{{imgUrl+item.mcOrderVeranda.image}}' catchtap='onLookPic'></image>
+      <!-- <view class='right row_c'>{{item.mcOrderVeranda.length}}</view> -->
+      <!-- <view class='bottom row_c'>{{item.mcOrderVeranda.width}}</view> -->
+    </view>
+  </view>
+</view>
+
+<view class='box1 row_s'  >
+  <navigator url='../brand/brand?id={{info.id}}' class='box-name1 nowarp row_c' >铝材:{{info.brandName}}</navigator>
+  <navigator url='../brand/brand?id={{info.id}}' class='box-name1 nowarp row_c' >系列:{{info.seriesName}}</navigator>
+  <navigator url='../brand/brand?id={{info.id}}' class='box-name1 nowarp row_c' >内窗颜色:{{info.colorName}}</navigator>
+  <navigator url='../brand/brand?id={{info.id}}' class='box-name1 nowarp row_c' >外窗颜色:{{info.colorName1}}</navigator>
+  <navigator url='../brand/brand?id={{info.id}}' class='box-name1 nowarp row_c' >配件:{{info.partsName}}</navigator>
+  <navigator url='../brand/brand?id={{info.id}}' class='box-name1 nowarp row_c' >玻璃:{{info.glassName}}</navigator>
+  <navigator url='../brand/brand?id={{info.id}}' class='box-name1 nowarp row_c' >防护栏:{{info.guardName}}</navigator>
+</view>
+<view class='box1 txt1 row_s'  >
+  实际制作尺寸与下单尺寸会有一定差距，0.25平方内为正常误差范围，如果差距大于或小于0.25平方以上则线下多退少补。
+</view>
+
+<!-- btn -->
+<view class='submit row_b' wx:if='{{info.paid<info.money}}'>
+   <button class='btn row_c' catchtap='onClick'>{{txt}}</button>
+   <button class='btn row_c' catchtap='onPayend'>支付尾款</button>
+</view>
+
+<view class='submit row_c' wx:else>
+   <button class='btn1 row_c' catchtap='onClick'>{{txt}}</button>
+</view>
+
+
+<view class="bgs" wx:if='{{isSelect}}' catchtap="onClose"></view>
+<view class="pay-box col_c" wx:if='{{isSelect}}'>
+  <view class="pay-title">请选择您的支付方式</view>
+  <view class="pay-btn row_c" catchtap="onWxPay">微信支付</view>
+  <!-- <navigator url='../upload/upload?id={{info.id}}'  catchtap="onClose" class='pay-btn row_c'>上传支付凭证</navigator> -->
+</view>
+
+<view class="wx-boxs" wx:if='{{isWx}}'>
+  <form bindsubmit='onWxClick'>
+  <view class="wx-box"></view>
+  <view class="wx-title row_c">请输入付款金额</view>
+  <view class="wx-txt row_s">付款金额</view>
+  <view class="wx-ipt-box row_s">
+    <input type="digit" class="wx-ipt" placeholder="" name='money'></input>
+    <view class="wx-ipt-left">￥</view>
+  </view>
+  <view class="wx-tip">根据个人微信限额额度可进行多次支付</view>
+  <button class='btn1 row_c' form-type="submit">确认微信支付</button>
+  </form>
+  
+  <view class="wx-txt row_b" style="margin-top:40rpx">总金额:￥{{payinfo.totalMoney}}</view>
+  <view class="wx-txt row_b" >已付金额:￥{{payinfo.payedMoney}}</view>
+  <view class="wx-txt row_b" >还需支付:￥{{payinfo.needMoney}}</view>
+
+</view>

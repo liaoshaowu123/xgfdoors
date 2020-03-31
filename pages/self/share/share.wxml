@@ -1,0 +1,9 @@
+
+<view class='page col_c'>
+  <image class="bg" src='/images/sharebg.png'></image>
+  <image class="code" src='{{code}}'></image>
+  <view class="tip1 row_c">新功夫团 门窗电商</view>
+  <view class="tip2 row_c">小程序推广码</view>
+  <view class="tip3 row_c">分享好友</view>
+  <button class="infos" open-type="share"></button>
+</view>

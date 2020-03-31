@@ -1,0 +1,53 @@
+<view class="types row_s">
+  <view class="{{typeIndex==index?'type1 row_c':'type row_c'}}" wx:for='{{typeList}}'
+    data-index='{{index}}' catchtap="onType"
+  >{{item.name}}</view>
+</view>
+
+
+<view class='list col_c'>
+  <block  wx:for='{{list}}'>
+    <view class='box row_b' wx:if='{{typeIndex==0}}'>
+      <view class="left col">
+        <view class="top row_s">
+          <view class='name'>{{item.userName}}</view>
+          <view class='time'>{{item.createDate}}</view>
+        </view>
+        <view class='area'>{{item.content}}</view>
+        <view class="bot row_s">
+          <view class='house'>{{item.plotName}}</view>
+          <!-- <view class='house' wx:if='{{typeIndex!=2}}'>{{item.plotName}}</view>
+          <view class='area' wx:else>{{item.area}}</view> -->
+          <!-- <view class='money1'>￥{{item.baseMoney}}</view> -->
+        </view>
+        
+      </view>
+      <view class='money'>+{{item.money}}</view>
+      
+    </view>
+    <view class='box1 col' wx:else>
+      <view class="top1 row_s">
+        <view class='name'>{{item.userName}}</view>
+        <view class='time'>{{item.createDate}}</view>
+      </view>
+
+      <view class="inv row_b">
+        <view class="row_s xiaoqu">
+          <view class='plotName'>{{item.plotName}}</view>
+          <view class='houseNo'>{{item.houseNo}}</view>
+        </view>
+        <view class='money1'>提拥:{{item.money}}元</view>
+        
+      </view>
+      
+      <view class="bots row_s">
+        <view class="band">{{item.aluminumName}}铝材</view>
+        <view class="band">{{item.colorName}}</view>
+        <view class="band">{{item.baseMoney}}米</view>
+        <view class="band">{{item.partsName}}</view>
+        <view class="band1">{{item.glassName}}</view>
+      </view>
+
+    </view>
+  </block>
+</view>

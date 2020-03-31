@@ -1,0 +1,6 @@
+<view class='list col'>
+  <view class='box row_b' wx:for='{{list}}'>
+    <view class='name'>{{item.userName}}</view>
+      <view class='time'>{{item.createDate}}</view>
+  </view>
+</view>

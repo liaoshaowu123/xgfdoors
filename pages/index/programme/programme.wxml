@@ -1,0 +1,40 @@
+
+
+
+<view class='title-box col'>
+  <view class='title '>☆您的户型有{{info.balcony}}处阳台需要封闭</view>
+  <view class='title '>☆总共面积{{info.acreage}}平方米(+-0.5)</view>
+  <view class='title '>☆点击下面菜单切换封窗方案</view>
+</view>
+
+<view class='list col'>
+  <view class='box'  wx:for='{{info.mcVeranda}}'>
+    <view class='title-box row_s'>
+      <view class='box-title '>{{item.name}}</view>
+      <view class='box-txt row_s'>封窗面积：{{item.list[item.type].acreage}}M<view style='margin-top:-20rpx;font-size:16rpx;'>2</view> </view>
+    </view>
+    <view class='btn-box row_c'>
+      <view class='{{i==item.type?"b-btn1 row_c":"b-btn row_c"}}' wx:for='{{item.list}}' wx:for-item='v' wx:for-index='i' data-i='{{i}}' data-index='{{index}}' catchtap='onSelect'>{{v.name}}</view>
+    </view>
+    <view class='hp-box'>
+      <view class='img-boxs row_c'>
+        <view class='img-box'>
+          <image class='img' mode='widthFix' src='{{imgUrl+item.list[item.type].image}}' data-img='{{imgUrl+item.list[item.type].image}}' catchtap='onLookPic'></image>
+          <!-- <view class='right row_c'>{{item.list[item.type].length}}</view>
+          <view class='bottom row_c'>{{item.list[item.type].width}}</view> -->
+        </view>
+      </view>
+      <view class='bot row'>
+        <view class='bot-t'>此方案基础材料</view>
+        <view class='bot-r col_c'>
+          <view class='bot-t1'>{{'| 铝材：'+item.list[item.type].aluminium+'米 | 五金配件：'+item.list[item.type].parts+'套'}}</view>
+          <view class='bot-b'>（方案基础材料随方案选择改变）</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='bot-btn row_c'>
+  <view class='btn row_c' catchtap='onClick'>下一步</view>
+</view>

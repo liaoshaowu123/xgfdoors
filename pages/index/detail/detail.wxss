@@ -1,0 +1,9 @@
+page{
+  background: #fff;
+}
+.txt{
+  padding: 20rpx;
+}
+image{
+  max-width: 100%;
+}

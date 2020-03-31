@@ -1,0 +1,39 @@
+
+
+<form bindsubmit="onClick" report-submit='true'>
+  <view class="boxs col">
+    <view class="top row_s">
+      <view class="tx-title">到账账户</view>
+      <view class="tx-txt">零钱包</view>
+    </view>
+
+    <view class="title row_s">余额提现</view>
+
+    <view class="ipt-box row_s">
+      <view class="ipt-title">￥</view>
+      <input class="ipt" type="number" name='money' value="{{putMoney}}" placeholder="输入金额" bindinput="onInput" placeholder-style="color:#999999;font-size:30rpx"></input>
+    </view>
+
+    <view class="bot row_s">
+      <view class="money-box row_s">
+        <view class="money-title">可提现余额</view>
+        <view class="money">{{money}}</view>
+      </view>
+      <view class="bot-btn row_c" catchtap="onAll">全部提现</view>
+    </view>
+    
+  </view>
+
+  <button form-type="submit" class="btn row_c">提现</button>
+</form>
+
+<view class="list col">
+  <view class="box row_b" wx:for='{{list}}'>
+    <view class="left col">
+      <view class="status">{{item.approvalStateName}}</view>
+      <view class="time">{{item.createDate}}</view>
+    </view>
+    <view class="right">+{{item.money}}</view>
+  </view>
+</view>
+

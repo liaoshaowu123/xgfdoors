@@ -1,0 +1,82 @@
+
+<form bindsubmit='onClick'>
+<view class='head col'>
+  <view class='box row_s'>
+    <view class='title row_c'>项目:</view>
+    <view class='title row_s'>{{info.house.name}}</view>
+  </view>
+  <view class='box row_s'>
+    <view class='title row_c'>房号:</view>
+    <input type='number' class='box-box' name='dong'></input>
+    <view class='txt'>栋</view>
+    <input type='number' class='box-box' name='dy'></input>
+    <view class='txt'>单元</view>
+    <input type='number' class='box-box' name='hao'></input>
+    <view class='txt'>号</view>
+  </view>
+  <!-- <view class='box row_s'>
+    <view class='title row_c'>上门时间:</view>
+    <input type='number' class='box-box' name='m'></input>
+    <view class='txt'>月</view>
+    <input type='number' class='box-box' name='d'></input>
+    <view class='txt'>日</view>
+    <input type='number' class='box-box' name='h'></input>
+    <view class='txt'>时</view>
+  </view> -->
+
+  <view class='box row_s'>
+    <view class='title row_c'>用户:</view>
+    <input type='text' class='box-box1' name='username'></input>
+  </view>
+
+  <view class='box row_s'>
+    <view class='title row_c'>手机:</view>
+    <input type='number' class='box-box1' name='tel'></input>
+  </view>
+</view>
+
+<view class='inv'>
+  <view class='inv-box row_b' data-index='0' catchtap='onSelect'>
+    <view class='inv-title'>预约量房收费{{lfprice}}元</view>
+    <image class='inv-img' src='{{priceIndex==0?"/images/sel1.png":"/images/sel.png"}}' data-index='0' catchtap='onSelect'></image>
+  </view>
+  <view class='inv-txt' data-index='0' catchtap='onSelect'>(量房费用下单后在总价里扣除，如果不下单，费用作为量房师傅工钱。)</view>
+  <view class='inv-box mar-t20 row_b' data-index='1' catchtap='onSelect'>
+    <view class='inv-title'>订单预算总价{{info.total_price}}元</view>
+    <image class='inv-img' src='{{priceIndex==1?"/images/sel1.png":"/images/sel.png"}}'  data-index='1' catchtap='onSelect'></image>
+  </view>
+</view>
+
+
+<!-- 确认 -->
+<view class='submit col'>
+   <!-- <view class='tips row_c' catchtap="onConta">查看合同模板</view> -->
+   <button class='btn row_c' form-type="submit">提交</button>
+   <view class='txt1 row_c'> 我们将在下单后24小时内电话联系您，与您预约复尺时间等事宜！</view>
+</view>
+</form>
+
+<view class="bgs" wx:if='{{isSelect}}' catchtap="onClose"></view>
+<view class="pay-box col_c" wx:if='{{isSelect}}'>
+  <view class="pay-title">请选择您的支付方式</view>
+  <view class="pay-btn row_c" catchtap="onWxPay">微信支付</view>
+  <!-- <navigator url='/pages/order/upload/upload?id={{orderid}}'  catchtap="onClose" class='pay-btn row_c'>上传支付凭证</navigator> -->
+</view>
+
+<view class="wx-boxs" wx:if='{{isWx}}'>
+  <form bindsubmit='onWxClick'>
+  <view class="wx-box"></view>
+  <view class="wx-title row_c">请输入付款金额</view>
+  <view class="wx-txt row_b">
+    <view>总金额:{{payinfo.totalMoney}}</view>
+    <view>已付金额:{{payinfo.payedMoney}}</view>
+  </view>
+  <view class="wx-txt row_s">付款金额</view>
+  <view class="wx-ipt-box row_s">
+    <input type="digit" class="wx-ipt" placeholder="" name='money'></input>
+    <view class="wx-ipt-left">￥</view>
+  </view>
+  <view class="wx-tip">根据个人微信限额额度可进行多次支付</view>
+  <button class='btn row_c' form-type="submit">确认微信支付</button>
+  </form>
+</view>

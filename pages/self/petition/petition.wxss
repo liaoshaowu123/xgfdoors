@@ -1,0 +1,78 @@
+/* pages/self/petition/petition.wxss */
+page{
+  background: #f8f8f8;
+}
+.list{
+  background: #fff;
+  width: 100%;
+}
+.box{
+  width: 690rpx;
+padding: 30rpx 30rpx 30rpx 0;
+min-height: 40rpx;
+border-bottom: #f1f1f1 1px solid;
+margin-left: 30rpx;
+margin-right: 30rpx;
+background: #fff;
+}
+.r{
+  width: 30rpx;
+  height: 30rpx;
+}
+.title{
+   font-family: PingFang-SC-Medium;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 39rpx;
+	letter-spacing: 0px;
+	color: #333333;
+  width: 200rpx;
+}
+.right{
+  flex: 1;
+  font-family: PingFang-SC-Medium;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 39rpx;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.picker{
+  margin-right: .2rem
+}
+.type-box{
+  font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 39rpx;
+	letter-spacing: 0px;
+	color: #333333;
+  width: 200rpx;
+  
+  margin-right: 20rpx;
+}
+.type-img{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 15rpx;
+}
+.ipt{
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 39rpx;
+	letter-spacing: 0px;
+	color: #333333;
+  width: 480rpx;
+}
+.btn{
+  margin-top: 100rpx;
+}
+.box{
+  
+}
+.box{
+  
+}

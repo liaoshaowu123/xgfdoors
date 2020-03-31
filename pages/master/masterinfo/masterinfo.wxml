@@ -1,0 +1,60 @@
+
+<view class='head'>
+  <view class='box-h row_b'>
+    <view class='name'>{{info.plotName}}{{info.houseNo}}</view>
+    <view class='num'>订单号：{{info.orderNo}}</view>
+  </view>
+
+  <view class='box-h row_b'>
+    <view class='time'>联系人:{{info.contacts}}</view>
+    <view class='time' catchtap='onCall'>电话：{{info.phone}}</view>
+  </view>
+
+  <view class='box-h row_b'>
+    <view class='time'>上门时间:{{info.createDate}}</view>
+  </view>
+</view>
+
+
+<view class='box'  wx:for='{{info.verandaList}}'>
+  <view class='box-box row_s'>
+    <view class='img-boxs row_c'>
+      <view class='img-box'>
+        <image class='img' mode='widthFix' src='{{imgUrl+item.mcOrderVeranda.image}}' data-img='{{imgUrl+item.mcOrderVeranda.image}}' catchtap='onLookPic'></image>
+        <view class='right row_c'>{{item.mcOrderVeranda.length}}</view>
+        <view class='bottom row_c'>{{item.mcOrderVeranda.width}}</view>
+      </view>
+    </view>
+    <view class='fa col_c'>
+      <view class='fa-btn'>尺寸核实</view>
+      <view class='fa-box row_c'>
+        <view class='fa-title'>宽:</view>
+        <input class='fa-ipt' placeholder='{{item.mcOrderVeranda.width}}' data-index='{{index}}' bindblur='onIputWidth'></input>
+      </view>
+      <view class='fa-box row_c'>
+        <view class='fa-title'>高:</view>
+        <input class='fa-ipt' placeholder='{{item.mcOrderVeranda.length}}' data-index='{{index}}' bindblur='onIputHeight'></input>
+      </view>
+      <view class='fa-box row_c'>
+        <view class='fa-title'>面积:</view>
+        <view class='fa-ipt' >{{item.mcOrderVeranda.width*item.mcOrderVeranda.length/1000000}}m2</view>
+      </view>
+    </view>
+  </view>
+  <textarea class='fa-bz' placeholder='输入备注' data-index='{{index}}' bindblur='onIputRemaker' value='{{item.mcOrderVeranda.detail}}'></textarea>
+  <view class='box-title row_c'>{{item.name}}</view>
+</view>
+
+<!-- <view class='box1 row_s'  >
+  <view class='box-name1 nowarp row_c' >铝材:{{info.lc}}</view>
+  <view class='box-name1 nowarp row_c' >系列:{{info.lcxl}}</view>
+  <view class='box-name1 nowarp row_c' >颜色:{{info.color}}</view>
+  <view class='box-name1 nowarp row_c' >配件:{{info.pei}}</view>
+  <view class='box-name1 nowarp row_c' >玻璃:{{info.bl}}</view>
+  <view class='box-name1 nowarp row_c' >防护栏:{{info.fhl}}</view>
+</view> -->
+
+<!-- btn -->
+<view class='submit col'>
+   <button class='btn row_c' catchtap='onClick'>{{txt}}</button>
+</view>

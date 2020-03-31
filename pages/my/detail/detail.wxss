@@ -1,0 +1,10 @@
+/* pages/my/detail/detail.wxss */
+page{
+  background: #fff;
+}
+.txt{
+  padding: 20rpx;
+}
+image{
+  max-width: 100%;
+}

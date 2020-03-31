@@ -1,0 +1,60 @@
+<view class='page'>
+
+  <!-- 地址 -->
+  <navigator url='city/city?city={{city}}' class="address row_b">
+    <view class="left row_s">
+      <image src='/images/address.png' class="add-img"></image>
+      <view class="city">{{city}}</view>
+    </view>
+    <view class="qh row_c">切换城市</view>
+  </navigator>
+  
+  <!-- 搜索 -->
+  <navigator url='search/search' class='search row_s'>
+    <image class='search-img' src='/images/search.png'></image>
+    <view  class='search-ipt' placeholder='搜索' bindinput='onInput'>搜索小区</view>
+  </navigator>
+
+
+
+ <!-- 项目列表 -->
+ <view class='list col'>
+   <view  wx:for='{{areaList}}' wx:for-item='v' wx:if='{{v.plots.length>0}}'>
+     <view class='list-title row_s'>{{v.name}}</view>
+     <view class='box row_s'  >
+       <view class='box-name nowarp row_c' wx:for='{{v.plots}}'  data-areaid='{{item.area}}' data-id='{{item.id}}' data-name='{{item.name}}' catchtap='onSelect'>{{item.name}}</view>
+     </view>
+   </view>
+  
+ </view>
+
+ <!--  -->
+<image class='master' src='/images/liang.png' catchtap='onMaster' wx:if='{{isMaster}}'></image>
+</view>
+
+<navigator url='city/city?city={{city}}' class="tipss row_c" wx:if='{{showTip}}'>该城市暂无支持的项目,点此查看已开放城市</navigator>
+
+<view class='bot row'>
+  <view class='bot-l row_c'>
+    <image class='bot-img' src='/images/kf.png'></image>
+    <view class='bot-txt'>在线客服</view>
+  </view>
+  <view class='bot-r row_c' catchtap='onCall'>
+    <image class='bot-img' src='/images/call.png'></image>
+    <view class='bot-txt'>电话咨询</view>
+  </view>
+  <button open-type='contact' class='share-btn'></button>
+</view>
+
+
+<!-- 授权界面 -->
+<view class='bg' wx:if='{{isscope}}'></view>
+<view class='scope row_c' wx:if='{{isscope}}'>
+<button class='infos ' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo"></button>
+  <!-- <view class='box2 row_c'>
+    <button class='infos ' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo"></button>
+    <view class='info row_c' >用户授权</view>
+  </view> -->
+</view>
+
+

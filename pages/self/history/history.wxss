@@ -1,0 +1,42 @@
+
+.box{
+  width: 690rpx;
+  padding: 0 30rpx;
+  height: 130rpx;
+  border-bottom: #f1f1f1 1rpx solid;
+  position: relative;
+}
+.title{
+  font-family: PingFang-SC-Medium;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+}
+.moeny{
+  font-family: PingFang-SC-Medium;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #999999;
+}
+.time{
+  margin-top: 10rpx;
+  font-family: PingFang-SC-Medium;
+	font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #c8c8c8;
+}
+.tips{
+  width: 100%;
+  height: 300rpx;
+  font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #999999;
+}

@@ -1,0 +1,75 @@
+/* pages/self/share/share.wxss */
+.page{
+  width: 100%;
+  position: relative;
+  background: #ea4e61;
+  padding: 100%;
+  
+}
+.bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 1220rpx;
+  z-index: 10;
+}
+.code{
+  position: absolute;
+  top: 464rpx;
+  left: 155rpx;
+  width: 440rpx;
+  height: 440rpx;
+   z-index: 11;
+}
+.tip1{
+  position: absolute;
+  top: 210rpx;
+  left: 75rpx;
+  width: 600rpx;
+  z-index: 11;
+  font-family: PingFang-SC-Medium;
+	font-size: 40rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+}
+
+.tip2{
+  position: absolute;
+  top: 280rpx;
+  left: 75rpx;
+  width: 600rpx;
+  z-index: 11;
+  font-family: PingFang-SC-Medium;
+	font-size: 40rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+}
+
+.tip3{
+  position: absolute;
+  top: 1022rpx;
+  left: 75rpx;
+  width: 600rpx;
+  z-index: 11;
+  font-family: PingFang-SC-Medium;
+	font-size: 34rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #ffffff;
+}
+
+.infos{
+  position: absolute;
+  left: 30rpx;
+  width: 690rpx;
+  top: 1000rpx;
+  height: 60rpx;
+  z-index: 99;
+  opacity: 0;
+}

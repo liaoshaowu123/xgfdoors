@@ -1,0 +1,30 @@
+
+
+<view class='head'>
+  <view class='name'>{{info.name}}</view>
+  <view class='box-h row_b'>
+    <view class='house'>{{info.house}}</view>
+    <view class='num'>订单号：{{info.num}}</view>
+  </view>
+
+  <view class='box-h row_b'>
+    <view class='time'>{{info.time}}</view>
+  </view>
+</view>
+
+
+
+
+<view class='ipt'   >{{str}}</view>
+<view class='xx row_s'>
+  <view class='xx-title'>服务评分:</view>
+  <image src='{{xxIndex>=index?"/images/xx-s.png":"/images/xx-n.png"}}' class='xx-img'
+    wx:for='12345'
+    data-index='{{index}}'
+    catchtap='onSelect'
+  ></image>
+</view>
+<!-- btn -->
+<!-- <view class='submit col'>
+   <button class='btn row_c' catchtap='onClick'>提交</button>
+</view> -->

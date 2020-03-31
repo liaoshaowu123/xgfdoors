@@ -1,0 +1,35 @@
+
+<!-- 项目列表 -->
+ <view class='list col'>
+   <view  wx:for='{{list}}' wx:for-item='v'>
+     <view class='top-boxs row_s'>
+      <view class='top-title row_s'>{{v.areaName}}</view>
+      <image class='top-img' src='/images/jt0.png'></image>
+      <view class='top-box row_s'>
+        <!-- <text class='top-f row_c'  wx:for='{{v.floor}}' wx:for-index='i' wx:if='i!=v.floor.length-1'>{{item}}、</text>
+        <text class='top-f row_c'  >{{v.floor[v.floor.length-1]}}栋</text> -->
+        <text class='top-f row_c'  >{{v.bulidingNo}}</text>
+        
+      </view>
+     </view>
+     <view class='list-txt row_s'>户型选择原则：例1栋1601户型对应01户型，5栋2205对应05户型</view>
+     <view class='box row_b'  >
+       <view class='{{index==typeIndex&&i==houseIndex?"box-box row_s":"box-box1 row_s"}}' 
+        wx:for='{{v.list}}' data-id='{{item.id}}' data-areaGroupId='{{v.id}}'
+        wx:for-index='i'
+        data-index='{{index}}'
+        data-i='{{i}}'
+        catchtap='onSelect'>
+        <view class='{{index==typeIndex&&i==houseIndex?"box-l2 row_c":"box-l1 row_c"}}'>{{index<10?"0":""}}{{i+1}}户型</view>
+        <view class='box-r1 row_c'>{{item.name}}</view>
+
+        <!-- <view class='box-left row_c'>{{index+1}}</view>
+        <view class='box-inv row_c'>户型</view>
+        <view class='box-right col_s'>
+          <view class='type'>{{item.type}}</view>
+          <view class='area'>{{item.area}}</view>
+        </view> -->
+       </view>
+     </view>
+   </view>
+ </view>

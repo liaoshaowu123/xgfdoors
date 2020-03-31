@@ -1,0 +1,22 @@
+<!-- 搜索 -->
+<view  class='search row_s'>
+  <image class='search-img' src='/images/search.png'></image>
+  <input class='search-ipt' placeholder='输入小区名称' bindinput='onInput'></input>
+</view>
+
+<!-- 历史列表
+ <view class='list col'>
+   <view class='box row_s'  >
+      <view class='box1 nowarp row_c' wx:for='{{lsList}}' data-name='{{item}}'  catchtap='onLx'>{{item}}</view>
+    </view>
+ </view> -->
+
+<!-- 项目列表 -->
+ <view class='list col'>
+   <view  wx:for='{{areaList}}' wx:for-item='v' wx:if='{{v.plots.length>0}}'>
+     <view class='list-title row_s'>{{v.name}}</view>
+     <view class='box row_s'  >
+       <view class='box-name nowarp row_c' wx:for='{{v.plots}}'  data-areaid='{{item.area}}' data-id='{{item.id}}' data-name='{{item.name}}' catchtap='onSelect'>{{item.name}}</view>
+     </view>
+   </view>
+ </view>

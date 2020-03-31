@@ -1,0 +1,23 @@
+
+<view class='box'>
+  <view class='h1 row_c'>销售合同</view>
+   <view class='h2 row_s'>甲方（买方）：</view>
+   <view class='h2 row_s'>乙方（卖方）：湖南新功夫网络科技有限公司</view>
+   <view class='h3 row_s' ><text space='nbsp'>        依照《中华人民共和国合同法》及其他有关法律、行政法规，甲方（买方）、乙方（卖方）遵循平等、自愿、公平和诚实信用的原则，签订如下合同，在接受本合同之前，请仔细阅读合同的全部内容。如点击接受本合同即意味着同意受本合同的约束。</text></view>
+   <view class='h3 row_s'><text space='nbsp'>        一、甲方在乙方经营的电子商务平台上选择需要购买的铝材品牌、产品系列、五金配件、颜色等，以订单详情选定并付款的为准。未经甲方同意，乙方不可随意跟换甲方所选定铝材品牌、产品系列、五金配件、颜色等。</text></view>
+   <view class='h3 row_s'><text space='nbsp'>        二、甲方在平台上下单并支付相应的货款，即视为甲方已确定自己所选择的购买方案，因门窗为私家定制产品，下单之日起不可申请退货，如非严重的质量问题，甲方亦不可申请换货。</text></view>
+   <view class='h3 row_s'><text space='nbsp'>        三、乙方负责运货上门及委托专业的安装公司上门安装等事宜。乙方发货地址及上门安装的地址以甲方在平台上下单时预留的送货地址为准，甲方如地址或联系方式发生变更，应及时通知甲方，否则，由此导致的运费损失及人工费损失由甲方承担。</text></view>
+   <view class='h3 row_s'><text space='nbsp'>        四、在甲方下单付款完成以及甲方预约乙方师傅复尺完成两项条件都达到时，乙方开始计算生产安装周期，乙方工期约在15-30天内完工交付甲方使用，如遇雨雪、雷电、强风天气以及甲方现场安装条件不具备等情况，工期应相应的顺延。</text></view>
+   <view class='h3 row_s'><text space='nbsp'>        五、平台对产品提供综合5年质保与免费维护（自全部安装施工完毕交付使用之日起计）。充氩气玻璃起雾10年免费更换，配件铂诺质保5年，派阁质保10年。保修期过后，乙方可提供收费上门维修，具体收费标准由双方根据具体维修情况进行协商收取。</text></view>
+   <view class='h3 row_s'><text space='nbsp'>        六、本合同之解释与适用，以及在履行本合同过程中发生的一切争议，应由双方友好协商解决，如不能协商解决，应向乙方所在地的人民法院提出起诉。</text></view>
+   <view class='h3 row_s'><text space='nbsp'>        七、本合同以电子签订方式签订，即甲方点击接受本合同即视为甲方接受本合同的全部内容，受本合同的约束。</text></view>
+
+  <view class="bot col">
+    <!-- <view class="left row_s">甲方：</view> -->
+    <view class="right row_s">平台方:湖南新功夫网络科技有限公司<image class="gz" src='/images/gz.png'></image></view>
+    <view class="right row_s">委托加工生产企业（盖章）:<image class="gz" src='/images/gz1.png'></image></view>
+    <view class="tip row_c">如业主需要纸质合同可加盖各品牌铝材生产企业公章</view>
+    <view class="time row_e">xxxx年xx月xx日</view>
+  </view>
+   
+</view>

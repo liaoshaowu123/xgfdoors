@@ -1,0 +1,66 @@
+page{
+  background: #f8f8f8;
+}
+.box{
+  width: 690rpx;
+  padding: 40rpx 30rpx 30rpx;
+  height: 80rpx;
+  position: relative;
+  background: #fff;
+  margin: 1px 0 10px;
+}
+.left{
+
+}
+
+.top{
+
+}
+.num{
+font-family: PingFang-SC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #666666;
+  margin-left: 30rpx;
+}
+
+.title{
+  font-family: PingFang-SC-Regular;
+	font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.right{
+  font-family: PingFang-SC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #c10000;
+}
+.time{
+  margin-top: 20rpx;
+  font-family: PingFang-SC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1px;
+	color: #666666;
+}
+.img{
+  width: 52rpx;
+	height: 90rpx;
+}
+.tips{
+  width: 100%;
+  height: 300rpx;
+  font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #999999;
+}

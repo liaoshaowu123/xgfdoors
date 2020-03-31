@@ -1,0 +1,280 @@
+page{
+  background: #f5f5f5;
+}
+.title-box{
+  width: 690rpx;
+  padding: 30rpx;
+  background: #fff;
+}
+.title{
+  font-family: PingFang-SC-Regular;
+	font-size: 34rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+}
+.title1{
+  font-family: PingFang-SC-Regular;
+	font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+  margin-top: 8rpx;
+}
+.dian{
+  margin: 0 15rpx;
+  width: 4rpx;
+  height: 4rpx;
+  background: #000;
+}
+
+.box{
+  width: 690rpx;
+  padding:50rpx 30rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.box-title{
+  font-family: PingFang-SC-Regular;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+}
+
+.list{
+  min-height: 120rpx;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-top: 25rpx;
+}
+.list-box1{
+  height: 68rpx;
+	border-radius: 4rpx;
+	border: solid 1rpx #c10000;
+  font-family: PingFang-SC-Regular;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2rpx;
+	color: #c10000;
+  padding: 0 24rpx;
+ margin:0 15rpx 25rpx 0;
+
+}
+.list-box{
+  height: 68rpx;
+	border-radius: 4rpx;
+	border: solid 1rpx #999999;
+  font-family: PingFang-SC-Regular;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2rpx;
+	color: #333;
+  padding: 0 24rpx;
+  margin:0 15rpx 25rpx 0;
+}
+.debox{
+  width: 640rpx;
+	min-height: 160rpx;
+	border: solid 1rpx #999999;
+  align-items:flex-start;
+  padding:15rpx 24rpx;
+  
+
+}
+.debox-xl{
+  flex-wrap: wrap;
+  white-space: pre-wrap;
+}
+
+.debox-title{
+  font-family: PingFang-SC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+  
+}
+.debox-xl1{
+  height: 44rpx;
+	background-color: #c10000;
+	border-radius: 4rpx;
+  padding: 0 18rpx;
+  font-family: PingFang-SC-Medium;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+  margin: 11rpx;
+  
+}
+.debox-xl2{
+  height: 44rpx;
+	background-color: #cccccc;
+	border-radius: 4rpx;
+  padding: 0 18rpx;
+  font-family: PingFang-SC-Medium;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+  margin: 11rpx;
+}
+.debox-txt{
+  font-family: PingFang-SC-Medium;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+  margin:0 14rpx 0 4rpx;
+
+}
+.debox-ys{
+margin-top: 40rpx;
+flex-wrap: wrap;
+white-space: pre-wrap;
+}
+.r-box{
+  flex-wrap: wrap;
+white-space: pre-wrap;
+flex: 1;
+margin-left: 10rpx;
+}
+.ys-box1{
+  min-width: 134rpx;
+	height: 44rpx;
+	border-radius: 4rpx;
+	border: solid 1rpx #c10000;
+  
+  color: #c10000;
+  margin: 11rpx;
+}
+.ys-box{
+  min-width: 134rpx;
+	height: 44rpx;
+	border-radius: 4rpx;
+	border: solid 1rpx #999999;
+ margin: 11rpx;
+  color: #333;
+}
+.color{
+  width: 30rpx;
+	height: 30rpx;
+}
+.debox-txt1{
+  font-family: PingFang-SC-Medium;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	
+  margin-left: 10rpx;
+}
+.botbox{
+  width: 640rpx;
+  padding: 0 24rpx;
+	height: 86rpx;
+	border: solid 1rpx #999999;
+  border-top: none;
+}
+.botbox-title{
+  font-family: PingFang-SC-Regular;
+	font-size: 28rpx;
+	font-weight: bolder;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+}
+.botbox-btn{
+  height: 44rpx;
+	background-color: #cccccc;
+	border-radius: 4rpx;
+  padding: 0 20rpx;
+  font-family: PingFang-SC-Medium;
+	font-size: 22rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+}
+.topbox{
+  width: 640rpx;
+  padding: 20rpx 24rpx;
+	min-height: 46rpx;
+	border: solid 1rpx #999999;
+}
+.botbox-price{
+  font-family: PingFang-SC-Regular;
+	font-size: 28rpx;
+	font-weight: bolder;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+}
+.botbox-price1{
+  font-family: PingFang-SC-Regular;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #666666;
+}
+.botbox-txt{
+  font-family: PingFang-SC-Regular;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #666666;
+}
+.topbox-txt{
+  font-family: PingFang-SC-Regular;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #666666;
+  margin-top: 10rpx;
+  white-space: pre-wrap;
+  flex-wrap: wrap;
+  line-height: 28rpx;
+}
+
+.submit{
+  width: 100%;
+  height: 340rpx;
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.submit-price{
+  font-family: PingFang-SC-Medium;
+	font-size: 34rpx;
+	font-weight: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+  margin: 50rpx 30rpx;
+}
+.btn{
+  width: 690rpx;
+	height: 88rpx;
+	background-color: #c10000;
+	border-radius: 10rpx;
+  margin: 20rpx 30rpx;
+  font-family: PingFang-SC-Regular;
+	font-size: 34rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+}

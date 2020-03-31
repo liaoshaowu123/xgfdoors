@@ -1,0 +1,26 @@
+<view class='list'>
+  <view class='box col' wx:for='{{list}}' >
+    
+    <view class='box-h row_b'>
+      <view class='name'>{{item.plotName}}{{item.houseNo}}</view>
+      <view class='status'>{{item.statuss}}</view>
+    </view>
+
+    <view class='box-h row_b'>
+      <view class='num'>订单号：{{item.orderNo}}</view>
+      <view class='price'>总价 ￥{{item.money}}</view>
+    </view>
+
+    <view class='box-h row_b'>
+      <view class='time'>{{item.createDate}}</view>
+      <view class='price1'>已付 ￥{{item.paid||0}}</view>
+    </view>
+
+    <view class='box-h row_e'>
+      <navigator url='record/record?id={{item.id}}' class='box-btn row_c'>付款记录</navigator>
+      <view class='box-btn row_c'  data-id='{{item.id}}' catchtap='onRouter'>订单详情</view>
+      <view class='box-btn row_c' data-id='{{item.id}}' catchtap='onClick' >查看合同</view>
+    </view>
+      
+  </view>
+</view>

@@ -1,0 +1,34 @@
+
+<!-- 标题 -->
+<view class='title-box row_c'>
+  <view data-index='0' class='{{swicthIndex==0?"swicth-box1 row_c":"swicth-box row_c"}}' catchtap='onSwicth'>未完成</view>
+  <view data-index='1' class='{{swicthIndex==1?"swicth-box1 row_c":"swicth-box row_c"}}' catchtap='onSwicth'>已完成</view>
+  <view data-index='2' class='{{swicthIndex==2?"swicth-box1 row_c":"swicth-box row_c"}}' catchtap='onSwicth'>已评价</view>
+</view>
+
+<view class='list'>
+  <view class='box col' wx:for='{{list}}' data-id='{{item.id}}' catchtap='onRouter'>
+    
+    <view class='box-h row_b'>
+      <view class='name'>{{item.plotName}}{{item.houseNo}}</view>
+      <view class='status'>{{item.statuss}}</view>
+    </view>
+
+    <view class='box-h row_b'>
+      <view class='num'>订单号：{{item.orderNo}}</view>
+      <view class='price'>￥{{item.money}}</view>
+    </view>
+
+    <view class='box-h row_b'>
+      <view class='time'>{{item.createDate}}</view>
+    </view>
+
+    <view class='box-h row_e'>
+      <view class='box-btn row_c'>查看订单</view>
+    </view>
+      
+  </view>
+  <view class='tip col_c' wx:if='{{list.length==0}}'>
+    没有发现订单.
+  </view>
+</view>

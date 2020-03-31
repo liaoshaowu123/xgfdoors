@@ -1,0 +1,5 @@
+/* global Component wx */
+
+Component({
+  
+})

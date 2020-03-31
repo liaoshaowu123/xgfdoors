@@ -1,0 +1,10 @@
+<view class='title'>☆如想了解更多产品信息，请您光临新功夫团体验店。</view>
+<view class='box col' wx:for='{{list}}' data-index='{{index}}' catchtap='onClick'>
+  <view class='box-title'>
+    {{item.name}}
+    <view class='box-btn row_c' data-id='{{item.id}}' catchtap='onDetails'>门店详情</view>
+  </view>
+  <image class='box-img' src='/images/dw.png'></image>
+  <view class='box-address'>{{item.address}}</view>
+  <view class='arrow'></view>
+</view>

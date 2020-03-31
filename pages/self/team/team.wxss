@@ -1,0 +1,29 @@
+
+
+.list{
+  
+}
+.box{
+  padding: 0 30rpx;
+  height: 100rpx;
+  width: 690rpx;
+  border-bottom:#f1f1f1 1px solid; 
+}
+.name{
+  font-family: PingFang-SC-Medium;
+	font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 30rpx;
+	letter-spacing: 0px;
+	color: #666666;
+}
+.time{
+  font-family: PingFang-SC-Medium;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 30rpx;
+	letter-spacing: 0px;
+	color: #666666;
+}

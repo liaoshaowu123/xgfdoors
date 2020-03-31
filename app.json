@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/city/city",
+    "pages/index/search/search",
+    "pages/index/house/house",
+    "pages/index/programme/programme",
+    "pages/index/brand/brand",
+    "pages/index/contact/contact",
+    "pages/index/contact/contract/contract",
+    "pages/index/detail/detail",
+    "pages/my/my",
+    "pages/my/detail/detail",
+    "pages/master/master",
+    "pages/master/masterinfo/masterinfo",
+    "pages/master/contract/contract",
+    "pages/order/orderinfo/orderinfo",
+    "pages/order/contract/contract",
+    "pages/order/comment/comment",
+    "pages/order/brand/brand",
+    "pages/order/record/record",
+    "pages/order/upload/upload",
+
+
+    "pages/self/self",
+    "pages/self/put/put",
+    "pages/self/team/team",
+    "pages/self/share/share",
+    "pages/self/dividends/dividends",
+    "pages/self/petition/petition",
+    "pages/order/order"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "新功夫团",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#c10000",
+    "backgroundColor": "#f1f1f1",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "方案",
+        "iconPath": "images/fa-n.png",
+        "selectedIconPath": "images/fa-s.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "images/dd-n.png",
+        "selectedIconPath": "images/dd-s.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "体验店",
+        "iconPath": "images/md-n.png",
+        "selectedIconPath": "images/md-s.png"
+      },
+      {
+        "pagePath": "pages/self/self",
+        "text": "我的",
+        "iconPath": "images/my-n.png",
+        "selectedIconPath": "images/my-s.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于我们展示对应城市所拥有的服务社区范围"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

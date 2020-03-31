@@ -1,0 +1,58 @@
+.box{
+  padding: 20rpx;
+}
+.h1{
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.h2{
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 18px;
+
+}
+.h3{
+margin-top: 10px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.bot{
+  width: 100%;
+  
+}
+
+.left{
+  font-size: 14px;
+  height: 100rpx;
+}
+
+.right
+{
+  font-size: 14px;
+  height: 150rpx;
+  position: relative;
+}
+.gz{
+  /* right: 80rpx;
+  top: 25rpx;
+  position: absolute; */
+  width: 150rpx;
+  height: 150rpx;
+  
+
+  margin: 0rpx 20rpx;
+}
+.tip{
+  font-size: 22rpx;
+  height: 100rpx;
+  color: #666;
+
+}
+
+.time{
+  height: 100rpx;
+  font-size: 26rpx;
+  color: #333;
+}

@@ -1,0 +1,39 @@
+<!--pages/order/upload/upload.wxml-->
+<view class="up-boxs col_c">
+ 
+  <view class="up-title">上传付款凭证</view>
+  <image class='up-img' src='{{upimg}}' catchtap='onSelectImg'></image>
+  <button class='btn row_c' catchtap="onClick">确认上传付款凭证</button>
+  <view class="wx-txt row_b" style="margin-top: 20rpx;">总金额:￥{{info.totalMoney}} </view>
+  <view class="wx-txt row_b" >已付金额:￥{{info.payedMoney}} </view>
+  <view class="wx-txt row_b" >还需支付:￥{{info.needMoney}} </view>
+  
+</view>
+
+<view class="list col">
+  <view class="boxs col" wx:for='{{list}}'>
+    <view class="title">收款信息</view>
+    <view class="box row_b">
+      <view class="box-title">收款方式</view>
+      <view class="box-txt" wx:if='{{item.collectType==0}}'>微信</view>
+      <view class="box-txt" wx:if='{{item.collectType==1}}'>支付宝</view>
+      <view class="box-txt" wx:if='{{item.collectType==2}}'>银行卡</view>
+    </view>
+    <view class="box row_b">
+      <view class="box-title">收款方</view>
+      <view class="box-txt">{{item.userName}}</view>
+    </view>
+    <view class="box row_b">
+      <view class="box-title">收款账号</view>
+      <view class="box-txt">{{item.bankCard}}</view>
+    </view>
+    <view class="box row_b" wx:if='{{item.collectType==2}}'>
+      <view class="box-title">收款银行</view>
+      <view class="box-txt">{{item.bankName}}</view>
+    </view>
+    <view class="box row_b" wx:else>
+      <view class="box-title">收款码</view>
+      <image class="box-img" src='{{item.collectCodeUrl}}' data-pic='{{item.collectCodeUrl}}' catchtap='onLookPic'></image>
+    </view>
+  </view>
+</view>

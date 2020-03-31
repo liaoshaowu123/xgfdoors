@@ -1,0 +1,83 @@
+
+<!-- 头部 -->
+<view class='head col_c'>
+  <image class='head-img' src='/images/mybg.png'></image>
+  <view class="user row_s">
+    <image class='img' src='{{avatar_url}}'></image>
+    <view class="user-right col">
+      <view class='name'>{{nickname}}</view>
+      <view class="row_s">
+        <view class="gh-box row_c" wx:for='{{lvArr}}'>
+          <view class="gh"></view>
+          <view class="gh-txt nowarp">{{item}}</view>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+  <button class='infos ' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" wx:if='{{isSq}}'></button>
+
+
+  <!-- money -->
+  <view class="money-boxs row_b">
+    <view class="money-box1 row_c">
+      <text class="moeny1">余额：</text>
+      <text class="moeny2">￥{{money}}</text>
+    </view>
+    <navigator url='put/put' class="money-box row_c">
+      提现
+    </navigator>
+  </view>
+
+</view>
+
+<view class="order row_b" catchtap="onOrder">
+  <view class="order-box row_c" >
+    <image class="order-icon" src='/images/order.png'></image>
+    <view class="order-name">我的订单</view>
+  </view>
+  <image class="right" src='/images/jt1.png'></image>
+</view>
+
+
+<view class="boxs col">
+  <view class="box row_b" data-path='team/team' catchtap="onRouter">
+    <view class="box-box row_c" >
+      <image class="box-icon" src='/images/icon-2.png'></image>
+      <view class="box-name">我的团队</view>
+    </view>
+    <image class="right" src='/images/jt1.png'></image>
+  </view>
+
+  <view class="box row_b" data-path='dividends/dividends' catchtap="onRouter">
+    <view class="box-box row_c" >
+      <image class="box-icon" src='/images/icon-1.png'></image>
+      <view class="box-name">团队分红</view>
+    </view>
+    <image class="right" src='/images/jt1.png'></image>
+  </view>
+
+  <view class="box row_b" data-path='share/share' catchtap="onRouter">
+    <view class="box-box row_c" >
+      <image class="box-icon" src='/images/icon-3.png'></image>
+      <view class="box-name">我要推广</view>
+    </view>
+    <image class="right" src='/images/jt1.png'></image>
+  </view>
+
+  <view class="box1 row_b" data-path='petition/petition' catchtap="onRouter">
+    <view class="box-box row_c" >
+      <image class="box-icon" src='/images/icon-5.png'></image>
+      <view class="box-name">成为团长</view>
+    </view>
+    <image class="right" src='/images/jt1.png'></image>
+  </view>
+</view>
+
+<!-- 授权界面 -->
+<view class='bg' wx:if='{{isscope}}'></view>
+<view class='scope col_c' wx:if='{{isscope}}'>
+  <image class="scope-icon" src='/images/logo.png'></image>
+  <view class="scope-txt">为了更好的服务您，新功夫团需要获取您的个人信息(昵称和头像)</view>
+  <button class='infoss row_c' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">好的</button>
+</view>

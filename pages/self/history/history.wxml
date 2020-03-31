@@ -1,0 +1,20 @@
+<view class="bz-head row_c">
+  <view class="bz-name">提现记录</view>
+  <navigator open-type="navigateBack" class="bz-back row_s">
+    <image class="bz-img" src='/images/back.png'></image>
+  </navigator>
+</view>
+<view class='bz-fill'></view>
+
+<view class='list col'>
+  <view class='box row_b' wx:for='{{list}}'>
+    <view class='title' wx:if='{{item.state==0}}'>待审核</view>
+    <view class='title' wx:if='{{item.state==1}}'>已通过</view>
+    <view class='title' wx:if='{{item.state==2}}'>已拒绝</view>
+    <view class='right col_e'>
+      <view class='money'>￥ {{item.money}}元</view>
+      <view class='time'>{{item.create_time}}</view>
+    </view>
+  </view>
+  <view class='tips row_c' wx:if='{{list.length<1}}'>您还没有记录</view>
+</view>
